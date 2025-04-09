@@ -45,6 +45,10 @@ const GlobalStyle = createGlobalStyle`
         #body-wrap {
             display: flex;
             flex: 1;
+
+            main {
+                flex: 1;
+            }
         }
     }
 

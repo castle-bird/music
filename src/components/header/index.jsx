@@ -1,11 +1,17 @@
 import HeaderContainer from "./header.styled";
+
+import Logo from "./logo";
+import Search from "./search";
 import ThemeBtn from "./themeBtn";
 
 export default function Header() {
     return (
         <HeaderContainer>
-            헤더
-            <ThemeBtn />
+            <div className="header-wrap">
+                <Logo />
+                <Search />
+                <ThemeBtn />
+            </div>
         </HeaderContainer>
     );
 }
