@@ -8,7 +8,12 @@ export default function Logo() {
     return (
         <LogoContainer>
             <Link to="/" aria-label="홈 바로가기">
-                <FontAwesomeIcon icon={faHeadphonesSimple} style={{ color: "#1ed760" }} />
+                <FontAwesomeIcon
+                    icon={faHeadphonesSimple}
+                    style={{ color: "#1ed760" }}
+                    role="img"
+                    aria-label="로고 아이콘"
+                />
             </Link>
         </LogoContainer>
     );
