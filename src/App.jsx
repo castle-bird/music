@@ -1,17 +1,18 @@
 import { Outlet } from "react-router-dom";
-import Header from "./components/header";
-import Playlist from "./components/playlist";
+import Header from "./components/layout/header";
+import MusicPlayer from "./components/layout/musicPlayer";
+import TopMenu from "./components/layout/topMenu";
 
 export default function App() {
     return (
         <>
             <Header />
-            <div id="body-wrap">
-                <Playlist />
-                <main>
-                    <Outlet />
-                </main>
-            </div>
+            <main>
+                <TopMenu />
+                <Outlet />
+            </main>
+
+            <MusicPlayer />
         </>
     );
 }

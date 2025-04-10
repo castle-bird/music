@@ -1,34 +1,24 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import App from "../App";
+import Error from "../pages/error";
 
-import MainRoot from "../pages/main/root";
-import Home from "../pages/main/home";
-import Comment from "../pages/main/comment";
-import RecentPlaylist from "../pages/main/recentPlaylist";
+import MainRoot from "../pages/main/MainRoot";
+import CategoriesRoot from "../pages/viewCategories/CategoriesRoot";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
+        errorElement: <Error />,
         children: [
             {
-                path: "/",
+                index: true,
                 element: <MainRoot />,
-                children: [
-                    {
-                        index: true,
-                        element: <Home />,
-                    },
-                    {
-                        path: "comment",
-                        element: <Comment />,
-                    },
-                    {
-                        path: "recent-playlist",
-                        element: <RecentPlaylist />,
-                    },
-                ],
+            },
+            {
+                path: "category/:id",
+                element: <CategoriesRoot />,
             },
         ],
     },
